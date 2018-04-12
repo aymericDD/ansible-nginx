@@ -1,12 +1,3 @@
-- name: Adds nginx ppa
-  apt_repository:
-    repo: "ppa:nginx/stable"
-
-- name: Adds PPA key
-  apt_key:
-    url: http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x00A6F0A3C300EE8C
-    state: present
-
 - name: Installs nginx
   apt:
     pkg: nginx-full
